@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  html {
+    font-family: "Vazirmatn", sans-serif;
+  }
+}
 
-
+/* 
 @font-face {
     font-family:Vazirmatn;
     src: url('fonts/Vazir/Vazirmatn-Thin.ttf') format('ttf');
@@ -74,4 +80,4 @@
     font-style: normal;
     font-display: swap;
   }
-  
+   */

@@ -2,10 +2,6 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
-    fontFamily: {
-      vazir: ["Vazirmatn", "sans-serif"],
-    },
-
     extend: {
       colors: {
         Teal: {
