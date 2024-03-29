@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
 @tailwind base;
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: #e7e7e7;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #69BEC7;
+  width: 4px;
+  border-radius: 10px;
+}
 @tailwind components;
 @tailwind utilities;
 @layer base {
