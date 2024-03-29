@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/build/tailwind/tailwind.css" />
+    <link rel="stylesheet" href="/public/build/scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <!-- !Background -->
+    <svg
+      class="fixed left-0 bottom-0 w-[496px] h-[524px] md:w-[696px] md:h-[724px]"
+      viewBox="0 0 896 1024"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M302.053 415.435C357.469 379.524 355.855 297.893 299.063 264.201L-99.1505 27.9646C-159.154 -7.63217 -234.922 36.5136 -233.542 106.268L-223.893 594.298C-222.513 664.053 -145.06 705.169 -86.5106 667.228L302.053 415.435Z"
+        fill="#0694A2"
+        fill-opacity="0.37"
+      />
+      <path
+        d="M-249.959 1012.14C-318.294 967.549 -318.294 867.451 -249.959 822.863L398.501 399.755C473.664 350.713 573.25 404.644 573.25 494.392L573.25 1340.61C573.25 1430.36 473.664 1484.29 398.501 1435.25L-249.959 1012.14Z"
+        fill="#0694A2"
+        fill-opacity="0.37"
+      />
+      <path
+        d="M-423.719 1172.45C-464.841 1145.62 -464.841 1085.38 -423.719 1058.55L352.091 552.349C397.322 522.836 457.25 555.291 457.25 609.298L457.25 1621.7C457.25 1675.71 397.322 1708.16 352.091 1678.65L-423.719 1172.45Z"
+        fill="#0694A2"
+        fill-opacity="0.37"
+      />
+    </svg>
+    <!-- ! Sign Up  Form -->
+    <div
+      class="h-screen flex items-center justify-center md:justify-start md:w-[40%] md:mr-8 lg:mr-20"
+    >
+      <div
+        class="backdrop-blur-3xl w-full md:backdrop-blur-0 rounded-xl m-auto mb-8"
+      >
+        <img
+          src="/public/images/ms-removebg-preview.png"
+          class="w-24 mx-auto"
+          alt="icon-ms"
+        />
+        <img
+          src="/public/images/central...-removebg-preview.png"
+          class="w-96 mx-auto"
+          alt="icon-ms-text"
+        />
+        <h1 class="text-3xl md:text-4xl font-bold text-Teal-500 text-center">
+          ثبت نام
+        </h1>
+        <form class="m-4">
+          <ul class="md:grid md:grid-cols-2 md:gap-x-4">
+            <li class="flex flex-col mb-6">
+              <label for="name" class="md:text-xl">نام </label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <i class="fa-solid fa-user text-Teal-500 md:text-xl"></i>
+                <input
+                  id="name"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2"
+                  type="text"
+                />
+              </div>
+            </li>
+            <li class="flex flex-col mb-6">
+              <label for="last-name" class="md:text-xl">نام خانوادگی </label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <i class="fa-solid fa-user text-Teal-500 md:text-xl"></i>
+                <input
+                  id="last-name"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2"
+                  type="text"
+                />
+              </div>
+            </li>
+            <li class="flex flex-col mb-6">
+              <label for="phone-number" class="md:text-xl"> شماره موبایل</label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <i
+                  class="fa-solid fa-mobile-screen-button text-Teal-500 md:text-xl"
+                ></i>
+                <input
+                  dir="ltr"
+                  id="phone-number"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2"
+                  type="number"
+                />
+              </div>
+            </li>
+            <li class="flex flex-col mb-6">
+              <label for="email" class="md:text-xl"> ایمیل</label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <i class="fa-solid fa-envelope text-Teal-500 md:text-xl"></i>
+                <input
+                  dir="ltr"
+                  id="email"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2"
+                  type="email"
+                />
+              </div>
+            </li>
+            <li class="flex flex-col mb-6">
+              <label for="show-password" class="md:text-xl">رمز عبور</label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <button class="show-password border-0 outline-none" id="show">
+                  <i class="fa-solid fa-eye md:text-xl text-Teal-500"></i>
+                </button>
+                <input
+                  dir="ltr"
+                  id="show-password"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2 check-password"
+                  type="password"
+                />
+              </div>
+            </li>
+            <li class="flex flex-col mb-6">
+              <label for="check-password" class="md:text-xl"
+                >تکرار رمز عبور
+              </label>
+              <div
+                class="flex items-center focus-within:shadow-md justify-between border-2 border-[#DDE4EC] bg-[#f4f5f7] rounded-lg mt-2 p-2 md:p-3"
+              >
+                <button id="check" class="show-password border-0 outline-none">
+                  <i class="fa-solid fa-eye md:text-xl text-Teal-500"></i>
+                </button>
+                <input
+                  dir="ltr"
+                  id="check-password"
+                  class="text-Teal-500 bg-transparent outline-0 border-0 w-full mr-2 check-password"
+                  type="password"
+                />
+              </div>
+            </li>
+          </ul>
+          <button
+            type="submit"
+            id="signup-button"
+            class="w-full p-2 md:p-3 md:text-xl bg-Teal-500 text-Teal-50 mt-4 rounded-lg"
+          >
+            ثبت نام
+          </button>
+          <button href="#" class="text-sm">مرا به خاطر بسپار</button>
+        </form>
+      </div>
+    </div>
+    <script src="/src/js/checkPassword.js"></script>
+  </body>
+</html>
