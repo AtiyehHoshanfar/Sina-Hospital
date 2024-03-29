@@ -2,6 +2,7 @@
 // !Selector
 const showPassword = document.querySelector("#show-password");
 const password = document.querySelector("#password");
+const form =document.querySelector("form")
 // ! Event Listener
 showPassword.addEventListener("click", togglePassword);
 // ! Function
@@ -17,3 +18,7 @@ function togglePassword() {
       '<i class="fa-solid fa-eye md:text-xl text-Teal-500"></i>';
   }
 }
+
+form.addEventListener("submit",(e)=>{
+e.preventDefault()
+})
