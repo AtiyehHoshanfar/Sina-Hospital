@@ -2,6 +2,7 @@
 @tailwind base;
 .scrollbar::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
   background-color: #e7e7e7;
 }
 .scrollbar::-webkit-scrollbar-thumb {
