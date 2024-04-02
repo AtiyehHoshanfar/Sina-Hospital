@@ -536,11 +536,20 @@ html {
 .hidden{
   display: none;
 }
+.h-10{
+  height: 2.5rem;
+}
 .h-12{
   height: 3rem;
 }
+.h-28{
+  height: 7rem;
+}
 .h-3{
   height: 0.75rem;
+}
+.h-4{
+  height: 1rem;
 }
 .h-40{
   height: 10rem;
@@ -560,11 +569,8 @@ html {
 .h-screen{
   height: 100vh;
 }
-.h-32{
-  height: 8rem;
-}
-.h-28{
-  height: 7rem;
+.w-10{
+  width: 2.5rem;
 }
 .w-12{
   width: 3rem;
@@ -574,6 +580,9 @@ html {
 }
 .w-3{
   width: 0.75rem;
+}
+.w-4{
+  width: 1rem;
 }
 .w-40{
   width: 10rem;
@@ -598,15 +607,6 @@ html {
 }
 .w-full{
   width: 100%;
-}
-.w-80{
-  width: 20rem;
-}
-.w-48{
-  width: 12rem;
-}
-.w-72{
-  width: 18rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -633,9 +633,6 @@ html {
 .justify-between{
   justify-content: space-between;
 }
-.overflow-x-scroll{
-  overflow-x: scroll;
-}
 .overflow-y-scroll{
   overflow-y: scroll;
 }
@@ -656,6 +653,9 @@ html {
 }
 .rounded-xl{
   border-radius: 0.75rem;
+}
+.border{
+  border-width: 1px;
 }
 .border-0{
   border-width: 0px;
@@ -716,9 +716,17 @@ html {
 .p-\[6px\]{
   padding: 6px;
 }
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .py-6{
   padding-top: 1.5rem;
@@ -756,8 +764,15 @@ html {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-bold{
   font-weight: 700;
+}
+.font-light{
+  font-weight: 300;
 }
 .font-medium{
   font-weight: 500;
@@ -993,20 +1008,20 @@ html {
   .md\:pt-0{
     padding-top: 0px;
   }
-  .md\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  .md\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .md\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
   .md\:text-Teal-50{

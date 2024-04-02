@@ -15,7 +15,7 @@
     <title>about doctor</title>
   </head>
   <body class="bg-[#EBF6F8]">
-    <!-- !Notification List  -->
+    <!-- !Notification List 
     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right">
         <h2 class="font-bold text-2xl p-2">لیست اطلاعیه ها</h2>
@@ -45,14 +45,14 @@
     </div>
 
     <!-- !New Patients -->
-    <div
+    <!-- <div
       class="bg-Teal-50 m-2 rounded-2xl md:w-[40%] p-2 py-6 flex flex-col items-center"
     >
       <h2 class="font-bold text-2xl p-2 mb-4">بیماران جدید</h2>
       <div class="w-40 h-40 rounded-full bg-[#E0E0E0] relative mb-4">
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <?xml version="1.0" encoding="iso-8859-1"?> -->
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    <!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg
           class="circle"
           fill="#000000"
@@ -89,9 +89,9 @@
           <span class="font-medium mr-2"> ویزیت نشده </span>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- !Upcoming Vist -->
-    <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
+    <!-- <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right text-sm md:text-lg">
         <h2 class="font-bold text-lg md:text-2xl p-2 mb-2">ویزیت های پیش رو</h2>
         <ul
@@ -133,6 +133,49 @@
           </li>
         </ul>
       </div>
+    </div>  -->
+
+    <!-- !Navbar Sidebar -->
+    <div class="p-2">
+
+      <!-- ! Mobile Navbar -->
+      <div class="flex items-center justify-between md:hidden" >
+        <div class="flex items-center justify-between">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="/public/images/300.avif"
+            alt="doctor image"
+          />
+          <div
+            class="flex flex-col mr-2  "
+          >
+            <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
+            <div class="text-sm font-light">نظام پزشکی :97040</div>
+          </div>
+        </div>
+        <!-- ? Hamburger menu -->
+        <button
+          id="hamburger-button"
+          class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
+        >
+          <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
+        </button>
+      </div>
+
+      <!-- ! Desktop Navbar -->
+      <div class=" hidden md:flex items-center justify-between">
+        <div class="flex items-center ">
+          <span class="font-bold text-2xl ">دکتر ناصر مقدسی</span>
+          <button class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full">
+            <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
+            <div class="w-4 h-4 text-xs  flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0">2</div>
+          </button>
+        </div>
+        <div class="flex items-center  ">
+          <div class="font-medium text-xl">شماره نظام پزشکی</div>
+          <div class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md">97040</div>
+        </div>
+         </div>
     </div>
   </body>
 </html>
