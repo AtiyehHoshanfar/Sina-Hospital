@@ -15,7 +15,103 @@
     <title>about doctor</title>
   </head>
   <body class="bg-[#EBF6F8]">
-    <!-- !Notification List 
+    <!-- !Navbar Sidebar -->
+    <div class="p-2 ">
+      <!-- ! Mobile Navbar -->
+      <div class="flex items-center justify-between md:hidden">
+        <div class="flex items-center justify-between">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="/public/images/300.avif"
+            alt="doctor image"
+          />
+          <div class="flex flex-col mr-2">
+            <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
+            <div class="text-sm font-light">نظام پزشکی :97040</div>
+          </div>
+        </div>
+        <!-- ? Hamburger menu -->
+        <button
+          id="hamburger-button"
+          class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
+        >
+          <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
+        </button>
+      </div>
+
+      <!-- ! Desktop Navbar -->
+      <div class="hidden md:flex items-center justify-between">
+        <div class="flex items-center">
+          <span class="font-bold text-2xl">دکتر ناصر مقدسی</span>
+          <button
+            class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full"
+          >
+            <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
+            <div
+              class="w-4 h-4 text-xs flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0"
+            >
+              2
+            </div>
+          </button>
+        </div>
+        <div class="flex items-center">
+          <div class="font-medium text-xl">شماره نظام پزشکی</div>
+          <div class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md">
+            97040
+          </div>
+        </div>
+      </div>
+<!-- ! mobile nav -->
+      <div
+        id="sidebar"
+        class="duration-1000 absolute md:relative flex flex-col justify-between translate-x-full transition-all md:w-28 md:rounded-[48px] md:translate-x-0 md:m-2  bg-Teal-500 top-0 right-0 h-screen w-[80%] pt-20 md:p-2"
+      >
+        <ul class="flex flex-col  ">
+          <img
+          class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full"
+          src="/public/images/300.avif"
+          alt="doctor image"
+        />
+          <div
+            class="md:w-32 md:h-32 hidden  relative right-2/4 translate-x-2/4 bg-[#EBF6F8] mx-auto  md:flex items-center justify-center rounded-full"
+          >
+            <img
+              class=" w-20"
+              src="/public/images/ms-removebg-preview.png"
+              alt="مرکز تحقیقات ام اس تهران"
+              />
+            </div>
+            <img class="w-96 items-center mx-auto mb-10 md:hidden" src="/public/images/logo-copy64.webp" alt="مرکز تحقیقات ام اس تهران">
+          <li
+            class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+          >
+            <a href="#">داشبورد</a>
+          </li>
+          <li
+            class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+          >
+            <a href="#">بیماران</a>
+          </li>
+          <li
+            class="px-4 py-3 m-1 rounded-full text-xl text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+          >
+            <a href="#">اطلاعیه</a>
+          </li>
+          <li
+            class="px-4 py-3 text-xl text-teal-50 m-1 rounded-full hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+          >
+            <a href="#">تنظیمات</a>
+          </li>
+        </ul>
+        <div>
+          <ul>
+            <li class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"><a href="#"> خروج</a></li>
+            <li>light/dark mode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- !Notification List -->
     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right">
         <h2 class="font-bold text-2xl p-2">لیست اطلاعیه ها</h2>
@@ -91,7 +187,7 @@
       </ul>
     </div> -->
     <!-- !Upcoming Vist -->
-    <!-- <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
+    <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right text-sm md:text-lg">
         <h2 class="font-bold text-lg md:text-2xl p-2 mb-2">ویزیت های پیش رو</h2>
         <ul
@@ -133,49 +229,8 @@
           </li>
         </ul>
       </div>
-    </div>  -->
-
-    <!-- !Navbar Sidebar -->
-    <div class="p-2">
-
-      <!-- ! Mobile Navbar -->
-      <div class="flex items-center justify-between md:hidden" >
-        <div class="flex items-center justify-between">
-          <img
-            class="w-12 h-12 rounded-full"
-            src="/public/images/300.avif"
-            alt="doctor image"
-          />
-          <div
-            class="flex flex-col mr-2  "
-          >
-            <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
-            <div class="text-sm font-light">نظام پزشکی :97040</div>
-          </div>
-        </div>
-        <!-- ? Hamburger menu -->
-        <button
-          id="hamburger-button"
-          class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
-        >
-          <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
-        </button>
-      </div>
-
-      <!-- ! Desktop Navbar -->
-      <div class=" hidden md:flex items-center justify-between">
-        <div class="flex items-center ">
-          <span class="font-bold text-2xl ">دکتر ناصر مقدسی</span>
-          <button class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full">
-            <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
-            <div class="w-4 h-4 text-xs  flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0">2</div>
-          </button>
-        </div>
-        <div class="flex items-center  ">
-          <div class="font-medium text-xl">شماره نظام پزشکی</div>
-          <div class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md">97040</div>
-        </div>
-         </div>
     </div>
+
+    <script src="/src/js/sidebar.js"></script>
   </body>
 </html>
