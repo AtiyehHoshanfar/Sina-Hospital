@@ -15,211 +15,268 @@
     <title>about doctor</title>
   </head>
   <body class="bg-[#EBF6F8]">
-        <!-- !Navbar Sidebar -->
-        <div class="p-2">
 
-          <!-- ! Mobile Navbar -->
-          <div class="flex items-center justify-between md:hidden" >
-            <div class="flex items-center justify-between">
-              <img
-                class="w-12 h-12 rounded-full"
-                src="/public/images/300.avif"
-                alt="doctor image"
-              />
-              <div
-                class="flex flex-col mr-2  "
-              >
-                <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
-                <div class="text-sm font-light">نظام پزشکی :97040</div>
-              </div>
-            </div>
-            <!-- ? Hamburger menu -->
-            <button
-              id="hamburger-button"
-              class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
-            >
-              <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
-            </button>
+  
+      <!-- ! Mobile Navbar -->
+      <div class="flex items-center justify-between md:hidden p-2">
+        <div class="flex items-center justify-between">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="/public/images/300.avif"
+            alt="doctor image"
+          />
+          <div class="flex flex-col mr-2">
+            <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
+            <div class="text-sm font-light">نظام پزشکی :97040</div>
           </div>
-    
-          <!-- ! Desktop Navbar -->
-          <div class=" hidden md:flex items-center justify-between">
-            <div class="flex items-center ">
-              <span class="font-bold text-2xl ">دکتر ناصر مقدسی</span>
-              <button class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full">
-                <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
-                <div class="w-4 h-4 text-xs  flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0">2</div>
-              </button>
-            </div>
-            <div class="flex items-center  ">
-              <div class="font-medium text-xl">شماره نظام پزشکی</div>
-              <div class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md">97040</div>
-            </div>
-             </div>
         </div>
-    <!-- !Notification List -->
-     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
-      <div dir="ltr" class="text-right">
-        <h2 class="font-bold text-2xl p-2">لیست اطلاعیه ها</h2>
-        <ul class="h-40 md:h-32 scrollbar overflow-y-scroll">
-          <li class="flex items-center justify-end border-b-2 pb-2 m-2">
-            <p class="font-medium mr-2">
-              ارائه برنامه کاربردی مبتنی بر تلفن همراه هوشمند برای خودمدیریتی
-              بیماران مبتلا به مالتیپل اسکلروزیس
-            </p>
-            <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
-          </li>
-          <li class="flex items-center justify-end border-b-2 pb-2 m-2">
-            <p class="font-medium mr-2">
-              تزریق واکسن کرونا به بیماران مبتلا به ام اس در بیمارستان سینا
-            </p>
-            <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
-          </li>
-          <li class="flex items-center justify-end pb-2 m-2">
-            <p class="font-medium mr-2">
-              ارتباط بین افزایش سطح کلسترول خون و اختلال شناختی ( عملکردهای ذهنی
-              ) در بیماران مبتلا به ام اس
-            </p>
-            <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
-          </li>
-        </ul>
-      </div>
-    </div> 
-
-
-
-
-
-        <!-- !All Patients -->
-
-
-
-        <div
-        class="bg-Teal-50  m-2 rounded-2xl  p-2 py-6 flex flex-col items-center"
-      >
-        <h2 class="font-bold text-2xl p-2">همه بیماران </h2>
-        <div class="relative w-40 h-40">
-          <canvas id="chartJSContainer2" width="1" height="1" class="rotate-180"></canvas>
-          <div class="absolute top-[35%] right-1/2 translate-x-1/2 translate-y-1/2"> 57%</div>
-      </div>
-  
-        <ul class="flex items-center justify-between">
-          <li class="flex items-center m-2">
-            <div class="w-3 h-3 bg-Teal-500 rounded-full"></div>
-            <span class="font-medium mr-2">مرخص شده </span>
-          </li>
-          <li class="flex items-center mr-6">
-            <div class="w-3 h-3 bg-[#69BEC7] rounded-full"></div>
-            <span class="font-medium mr-2"> ویزیت شده </span>
-          </li>
-        </ul>
-      </div> 
-
-    <!-- !New Patients -->
-
-
-
-     <div
-      class="bg-Teal-50 m-2 rounded-2xl  p-2 py-6 flex flex-col items-center"
-    >
-      <h2 class="font-bold text-2xl p-2">بیماران جدید</h2>
-      <div class="relative w-40 h-40">
-        <canvas id="chartJSContainer" width="1" height="1"></canvas>
-        <div class="absolute top-[40%] right-1/2 translate-x-1/2 translate-y-1/2"> 46%</div>
-    </div>
-
-      <ul class="flex items-center justify-between">
-        <li class="flex items-center m-2">
-          <div class="w-3 h-3 bg-Teal-500 rounded-full"></div>
-          <span class="font-medium mr-2"> ویزیت شده </span>
-        </li>
-        <li class="flex items-center mr-6">
-          <div class="w-3 h-3 bg-[#E0E0E0] rounded-full"></div>
-          <span class="font-medium mr-2"> ویزیت نشده </span>
-        </li>
-      </ul>
-    </div> 
-
-<!-- !visited Patients  -->
-<div
-class="bg-Teal-50 m-2 rounded-2xl  p-2 py-6 flex flex-col items-center"
->
-<h2 class="font-bold text-2xl p-2">بیماران ویزیت شده</h2>
-
-<div class="md:flex ">
-  <ul class="flex items-center justify-center ml-2   md:flex-col">
-    <li class="flex items-center m-2 justify-between w-full  ">
-      <span class="font-medium ml-1 ">امروز </span>
-      <div class="bg-[#EBF6F8] md:p-1 rounded-md w-10 md:w-16 flex items-center justify-center">18</div>
-    </li>
-    <li class="flex items-center m-2 justify-between w-full">
-      <span class="font-medium ml-1 ">هفتگی </span>
-      <div class=" bg-[#EBF6F8] md:p-1 rounded-md w-10 md:w-16 flex items-center justify-center ">298</div>
-    </li>
-      <li class="flex items-center m-2 justify-between w-full">
-        <span class="font-medium ml-1 ">ماهانه </span>
-      <div class=" bg-[#EBF6F8] md:p-1  rounded-md  w-10 md:w-16 flex items-center justify-center">587</div>
-    </li>
-  </ul>
-  <div class="  mx-auto">
-    <canvas id="myChart" class=" w-[280px] md:w-[500px]"></canvas>
-  </div>
-  
-
-</div>
-</div> 
-
-
-
-    <!-- !Upcoming Vist -->
-     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
-      <div dir="ltr" class="text-right text-sm md:text-lg">
-        <h2 class="font-bold text-lg md:text-2xl p-2 mb-2">ویزیت های پیش رو</h2>
-        <ul
-          class="flex items-center justify-between bg-Teal-500 text-Teal-50 p-2 rounded-md"
+        <!-- ? Hamburger menu -->
+        <button
+          id="hamburger-button"
+          class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
         >
-          <li class="flex-1 text-center">تاریخ</li>
-          <li class="flex-1 text-center">ساعت پذیرش</li>
-          <li class="flex-1 text-center">علت مراجعه</li>
-          <li class="flex-1 text-center">شماره نوبت</li>
-          <li class="flex-1 text-center">نام بیمار</li>
-        </ul>
-        <ul class="h-28 scrollbar overflow-y-scroll my-2">
-          <li class="flex items-center justify-end border-b-2 pb-2 m-2">
-            <ul class="flex items-center justify-between w-full">
-              <li class="flex-1 text-center">1402/04/24</li>
-              <li class="flex-1 text-center">14:17</li>
-              <li class="flex-1 text-center">تصادف</li>
-              <li class="flex-1 text-center">178</li>
-              <li class="flex-1 text-center">علی محمدی</li>
-            </ul>
-          </li>
-          <li class="flex items-center justify-end border-b-2 pb-2 m-2">
-            <ul class="flex items-center justify-between w-full">
-              <li class="flex-1 text-center">1402/04/24</li>
-              <li class="flex-1 text-center">14:30</li>
-              <li class="flex-1 text-center">تصادف</li>
-              <li class="flex-1 text-center">179</li>
-              <li class="flex-1 text-center">زهرا مرادی</li>
-            </ul>
-          </li>
-          <li class="flex items-center justify-end pb-2 m-2">
-            <ul class="flex items-center justify-between w-full">
-              <li class="flex-1 text-center">1402/04/24</li>
-              <li class="flex-1 text-center">14:59</li>
-              <li class="flex-1 text-center">تصادف</li>
-              <li class="flex-1 text-center">180</li>
-              <li class="flex-1 text-center">محمد قادری</li>
-            </ul>
-          </li>
-        </ul>
+          <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
+        </button>
       </div>
-    </div>  
+
+
+<div class="md:flex">
+       <!-- ! mobile nav -->
+
+       <ul id="sidebar"
+       class="flex duration-1000 flex-col z-50 fixed md:sticky md:translate-x-0 translate-x-full transition-all bg-Teal-500 top-0 right-0 h-screen w-[80%] md:w-28 pt-20 md:p-2 md:m-2 md:rounded-[50px]"
+     >
+           <img
+           class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full"
+           src="/public/images/300.avif"
+           alt="doctor image"
+         />
+           <div
+             class="md:w-32 md:h-32 hidden  relative right-2/4 translate-x-2/4 bg-[#EBF6F8] mx-auto  md:flex items-center justify-center rounded-full"
+           >
+             <img
+               class=" w-20"
+               src="/public/images/ms-removebg-preview.png"
+               alt="مرکز تحقیقات ام اس تهران"
+               />
+             </div>
+             <img class="w-96 items-center mx-auto mb-10 md:hidden" src="/public/images/logo-copy64.webp" alt="مرکز تحقیقات ام اس تهران">
+           <li
+             class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+           >
+             <a href="#">داشبورد</a>
+           </li>
+           <li
+             class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+           >
+             <a href="#">بیماران</a>
+           </li>
+           <li
+             class="px-4 py-3 m-1 rounded-full text-xl text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+           >
+             <a href="#">اطلاعیه</a>
+           </li>
+           <li
+             class="px-4 py-3 text-xl text-teal-50 m-1 rounded-full hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+           >
+             <a href="#">تنظیمات</a>
+           </li>
+         </ul>
+ 
+         <!-- ! main content -->
+ 
+  <div class="md:flex-1 main-container md:p-6">
+    
+                 <!-- ! Desktop Navbar -->
+                 <div class="navbar hidden md:flex items-center justify-between p-2">
+                  <div class="flex items-center">
+                    <span class="font-bold text-2xl">دکتر ناصر مقدسی</span>
+                    <button
+                      class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full"
+                    >
+                      <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
+                      <div
+                        class="w-4 h-4 text-xs flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0"
+                      >
+                        2
+                      </div>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="font-medium text-xl">شماره نظام پزشکی</div>
+                    <div class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md">
+                      97040
+                    </div>
+                  </div>
+                </div>
+              <!-- !Notification List -->
+               <div class="notification bg-Teal-50 m-2 rounded-2xl p-2 py-6  ">
+                <div dir="ltr" class="text-right">
+                  <h2 class="font-bold text-2xl p-2">لیست اطلاعیه ها</h2>
+                  <ul class="h-40 md:h-32 scrollbar overflow-y-scroll">
+                    <li class="flex items-center justify-end border-b-2 pb-2 m-2">
+                      <p class="font-medium mr-2">
+                        ارائه برنامه کاربردی مبتنی بر تلفن همراه هوشمند برای خودمدیریتی
+                        بیماران مبتلا به مالتیپل اسکلروزیس
+                      </p>
+                      <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
+                    </li>
+                    <li class="flex items-center justify-end border-b-2 pb-2 m-2">
+                      <p class="font-medium mr-2">
+                        تزریق واکسن کرونا به بیماران مبتلا به ام اس در بیمارستان سینا
+                      </p>
+                      <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
+                    </li>
+                    <li class="flex items-center justify-end pb-2 m-2">
+                      <p class="font-medium mr-2">
+                        ارتباط بین افزایش سطح کلسترول خون و اختلال شناختی ( عملکردهای ذهنی
+                        ) در بیماران مبتلا به ام اس
+                      </p>
+                      <div class="hidden md:block w-3 h-3 bg-Teal-500 rounded-full"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+          
+          
+          
+          
+          
+                  <!-- !All Patients -->
+          
+          
+          
+                  <div
+                  class="all-patient bg-Teal-50  m-2 rounded-2xl  p-2 py-6 flex flex-col items-center  "
+                >
+                  <h2 class="font-bold text-2xl p-2">همه بیماران </h2>
+                  <div class="relative w-40 h-40">
+                    <canvas id="chartJSContainer2" width="1" height="1" class="rotate-180"></canvas>
+                    <div class="absolute top-[35%] right-1/2 translate-x-1/2 translate-y-1/2"> 57%</div>
+                </div>
+            
+                  <ul class="flex items-center justify-between">
+                    <li class="flex items-center m-2">
+                      <div class="w-3 h-3 bg-Teal-500 rounded-full"></div>
+                      <span class="font-medium mr-2">مرخص شده </span>
+                    </li>
+                    <li class="flex items-center mr-6">
+                      <div class="w-3 h-3 bg-[#69BEC7] rounded-full"></div>
+                      <span class="font-medium mr-2"> ویزیت شده </span>
+                    </li>
+                  </ul>
+                </div> 
+          
+              <!-- !New Patients -->
+          
+          
+          
+               <div
+                class="new-patient bg-Teal-50 m-2 rounded-2xl  p-2 py-6 flex flex-col items-center  "
+              >
+                <h2 class="font-bold text-2xl p-2">بیماران جدید</h2>
+                <div class="relative w-40 h-40">
+                  <canvas id="chartJSContainer" width="1" height="1"></canvas>
+                  <div class="absolute top-[40%] right-1/2 translate-x-1/2 translate-y-1/2"> 46%</div>
+              </div>
+          
+                <ul class="flex items-center justify-between">
+                  <li class="flex items-center m-2">
+                    <div class="w-3 h-3 bg-Teal-500 rounded-full"></div>
+                    <span class="font-medium mr-2"> ویزیت شده </span>
+                  </li>
+                  <li class="flex items-center mr-6">
+                    <div class="w-3 h-3 bg-[#E0E0E0] rounded-full"></div>
+                    <span class="font-medium mr-2"> ویزیت نشده </span>
+                  </li>
+                </ul>
+              </div> 
+          
+          <!-- !visited Patients  -->
+          <div
+          class="visited-patient bg-Teal-50 m-2 rounded-2xl  p-2 py-6 flex flex-col items-center "
+          >
+          <h2 class="font-bold text-2xl p-2">بیماران ویزیت شده</h2>
+          
+          <div class="md:flex ">
+            <ul class="flex items-center justify-center ml-2   md:flex-col">
+              <li class="flex items-center m-2 justify-between w-full  ">
+                <span class="font-medium ml-1 ">امروز </span>
+                <div class="bg-[#EBF6F8] md:p-1 rounded-md w-10 md:w-16 flex items-center justify-center">18</div>
+              </li>
+              <li class="flex items-center m-2 justify-between w-full">
+                <span class="font-medium ml-1 ">هفتگی </span>
+                <div class=" bg-[#EBF6F8] md:p-1 rounded-md w-10 md:w-16 flex items-center justify-center ">298</div>
+              </li>
+                <li class="flex items-center m-2 justify-between w-full">
+                  <span class="font-medium ml-1 ">ماهانه </span>
+                <div class=" bg-[#EBF6F8] md:p-1  rounded-md  w-10 md:w-16 flex items-center justify-center">587</div>
+              </li>
+            </ul>
+            <div class="  mx-auto">
+              <canvas id="myChart" class=" w-[280px] md:w-[500px]"></canvas>
+            </div>
+            
+          
+          </div>
+          </div> 
+          
+          
+          
+              <!-- !Upcoming Vist -->
+               <div class="upcoming-patient bg-Teal-50 m-2 rounded-2xl p-2 py-6 ">
+                <div dir="ltr" class="text-right text-sm md:text-lg">
+                  <h2 class="font-bold text-lg md:text-2xl p-2 mb-2">ویزیت های پیش رو</h2>
+                  <ul
+                    class="flex items-center justify-between bg-Teal-500 text-Teal-50 p-2 rounded-md"
+                  >
+                    <li class="flex-1 text-center">تاریخ</li>
+                    <li class="flex-1 text-center">ساعت پذیرش</li>
+                    <li class="flex-1 text-center">علت مراجعه</li>
+                    <li class="flex-1 text-center">شماره نوبت</li>
+                    <li class="flex-1 text-center">نام بیمار</li>
+                  </ul>
+                  <ul class="h-28 scrollbar overflow-y-scroll my-2">
+                    <li class="flex items-center justify-end border-b-2 pb-2 m-2">
+                      <ul class="flex items-center justify-between w-full">
+                        <li class="flex-1 text-center">1402/04/24</li>
+                        <li class="flex-1 text-center">14:17</li>
+                        <li class="flex-1 text-center">تصادف</li>
+                        <li class="flex-1 text-center">178</li>
+                        <li class="flex-1 text-center">علی محمدی</li>
+                      </ul>
+                    </li>
+                    <li class="flex items-center justify-end border-b-2 pb-2 m-2">
+                      <ul class="flex items-center justify-between w-full">
+                        <li class="flex-1 text-center">1402/04/24</li>
+                        <li class="flex-1 text-center">14:30</li>
+                        <li class="flex-1 text-center">تصادف</li>
+                        <li class="flex-1 text-center">179</li>
+                        <li class="flex-1 text-center">زهرا مرادی</li>
+                      </ul>
+                    </li>
+                    <li class="flex items-center justify-end pb-2 m-2">
+                      <ul class="flex items-center justify-between w-full">
+                        <li class="flex-1 text-center">1402/04/24</li>
+                        <li class="flex-1 text-center">14:59</li>
+                        <li class="flex-1 text-center">تصادف</li>
+                        <li class="flex-1 text-center">180</li>
+                        <li class="flex-1 text-center">محمد قادری</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+  </div>
+           
+</div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"></script>
 <script src="/src/js/allPatient.js"></script>
 <script src="/src/js/newPatients.js"></script>
+<script src="/src/js/sidebar.js"></script>
 <script src="/src/js/visitedPatient.js"></script>
+
   </body>
 </html>
