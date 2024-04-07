@@ -15,8 +15,8 @@
     <title>about doctor</title>
   </head>
   <body class="bg-[#EBF6F8]">
-    <!-- !Notification List 
-    <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
+    <!-- !Notification List -->
+     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right">
         <h2 class="font-bold text-2xl p-2">لیست اطلاعیه ها</h2>
         <ul class="h-40 md:h-32 scrollbar overflow-y-scroll">
@@ -42,42 +42,20 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> 
 
     <!-- !New Patients -->
-    <!-- <div
+
+
+
+     <div
       class="bg-Teal-50 m-2 rounded-2xl md:w-[40%] p-2 py-6 flex flex-col items-center"
     >
-      <h2 class="font-bold text-2xl p-2 mb-4">بیماران جدید</h2>
-      <div class="w-40 h-40 rounded-full bg-[#E0E0E0] relative mb-4">
-        <?xml version="1.0" encoding="iso-8859-1"?> -->
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-    <!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-        <svg
-          class="circle"
-          fill="#000000"
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="160px"
-          height="160px"
-          viewBox="0 0 25.334 25.334"
-          xml:space="preserve"
-        >
-          <g>
-            <path
-              d="M25.334,12.667c0,6.996-5.672,12.667-12.668,12.667C5.672,25.334,0,19.663,0,12.667S5.672,0,12.666,0
-		C19.662,0,25.334,5.671,25.334,12.667z"
-            />
-          </g>
-        </svg>
-        <div
-          class="flex items-center justify-center font-bold text-3xl w-[122px] h-[122px] rounded-full bg-Teal-50 absolute top-[19px] right-[19px]"
-        >
-          46%
-        </div>
-      </div>
+      <h2 class="font-bold text-2xl p-2">بیماران جدید</h2>
+      <div class="relative w-40 h-40">
+        <canvas id="chartJSContainer" width="1" height="1"></canvas>
+        <div class="absolute top-[40%] right-1/2 translate-x-1/2 translate-y-1/2"> 46%</div>
+    </div>
 
       <ul class="flex items-center justify-between">
         <li class="flex items-center m-2">
@@ -89,9 +67,9 @@
           <span class="font-medium mr-2"> ویزیت نشده </span>
         </li>
       </ul>
-    </div> -->
+    </div> 
     <!-- !Upcoming Vist -->
-    <!-- <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
+     <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6">
       <div dir="ltr" class="text-right text-sm md:text-lg">
         <h2 class="font-bold text-lg md:text-2xl p-2 mb-2">ویزیت های پیش رو</h2>
         <ul
@@ -133,7 +111,7 @@
           </li>
         </ul>
       </div>
-    </div>  -->
+    </div>  
 
     <!-- !Navbar Sidebar -->
     <div class="p-2">
@@ -177,5 +155,7 @@
         </div>
          </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"></script>
+<script src="/src/js/allPatient.js"></script>
   </body>
 </html>
