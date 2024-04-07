@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/build/tailwind/tailwind.css" />
+    <link rel="stylesheet" href="/public/build/scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>patient</title>
+  </head>
+  <body class="bg-[#EBF6F8]">
+    <!-- ! Mobile Navbar -->
+    <div class="flex items-center justify-between md:hidden p-2">
+      <div class="flex items-center justify-between">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="/public/images/300.avif"
+          alt="doctor image"
+        />
+        <div class="flex flex-col mr-2">
+          <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
+          <div class="text-sm font-light">نظام پزشکی :97040</div>
+        </div>
+      </div>
+      <!-- ? Hamburger menu -->
+      <button
+        id="hamburger-button"
+        class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
+      >
+        <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
+      </button>
+    </div>
+
+    <div class="md:flex">
+      <!-- ! mobile nav -->
+
+      <ul
+        id="sidebar"
+        class="flex duration-1000 flex-col z-50 fixed md:sticky md:translate-x-0 translate-x-full transition-all bg-Teal-500 top-0 right-0 h-screen w-[80%] md:w-28 pt-20 md:p-2 md:m-2 md:rounded-[50px]"
+      >
+        <img
+          class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full"
+          src="/public/images/300.avif"
+          alt="doctor image"
+        />
+        <div
+          class="md:w-32 md:h-32 hidden relative right-2/4 translate-x-2/4 bg-[#EBF6F8] mx-auto md:flex items-center justify-center rounded-full"
+        >
+          <img
+            class="w-20"
+            src="/public/images/ms-removebg-preview.png"
+            alt="مرکز تحقیقات ام اس تهران"
+          />
+        </div>
+        <img
+          class="w-96 items-center mx-auto mb-10 md:hidden"
+          src="/public/images/logo-copy64.webp"
+          alt="مرکز تحقیقات ام اس تهران"
+        />
+        <li
+          class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">داشبورد</a>
+        </li>
+        <li
+          class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">بیماران</a>
+        </li>
+        <li
+          class="px-4 py-3 m-1 rounded-full text-xl text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">اطلاعیه</a>
+        </li>
+        <li
+          class="px-4 py-3 text-xl text-teal-50 m-1 rounded-full hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">تنظیمات</a>
+        </li>
+      </ul>
+
+      <!-- ! main content -->
+
+      <div class="md:flex-1 md:p-6 ">
+        <!-- ! Desktop Navbar -->
+        <div class="navbar hidden md:flex items-center justify-between p-2">
+          <div class="flex items-center">
+            <span class="font-bold text-2xl">دکتر ناصر مقدسی</span>
+            <button
+              class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full"
+            >
+              <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
+              <div
+                class="w-4 h-4 text-xs flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0"
+              >
+                2
+              </div>
+            </button>
+          </div>
+          <div class="flex items-center">
+            <div class="font-medium text-xl">شماره نظام پزشکی</div>
+            <div
+              class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md"
+            >
+              97040
+            </div>
+          </div>
+        </div>
+        <!-- ! main contnet -->
+        <div class="bg-Teal-50 m-2 rounded-2xl p-2 py-6 ">
+          <div class="text-right text-sm md:text-lg">
+            <ul
+              class="flex items-center justify-between bg-Teal-500 text-Teal-50 p-2 rounded-md"
+            >
+            <li class="flex-1 text-center">نام بیمار</li>
+            <li class="flex-1 text-center">شماره نوبت</li>
+            <li class="flex-1 text-center">علت مراجعه</li>
+            <li class="flex-1 text-center">ساعت پذیرش</li>
+              <li class="flex-1 text-center">تاریخ</li>
+            </ul>
+            <ul class="h-[70vh] my-2 scrollbar overflow-y-scroll px-2 " dir="ltr">
+              <a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">زهرا مرادی</li>
+                  </ul>
+                </li>
+              </a>
+              <a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">علی محمدی</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">رضا فرهادی</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">حجت اکبری</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">میثم اکبری</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">مریم رضایی</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 md:mb-4 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">علی محمدی</li>
+                  </ul>
+                </li> </a
+              ><a href="#" class="patient-link">
+                <li
+                  class="patient-item flex items-center justify-end border-2 rounded-xl py-6 mb-2 relative"
+                >
+                  <ul class="flex items-center justify-between w-full">
+                    <div
+                      class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-slate-200"
+                    ></div>
+                    <li class="flex-1 text-center">1402/04/24</li>
+                    <li class="flex-1 text-center">14:17</li>
+                    <li class="flex-1 text-center">تصادف</li>
+                    <li class="flex-1 text-center">178</li>
+                    <li class="flex-1 text-center">علی محمدی</li>
+                  </ul>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/js/patient.js"></script>
+    <script src="/src/js/sidebar.js"></script>
+  </body>
+</html>
