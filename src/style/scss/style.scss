@@ -14,11 +14,37 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.circle{
-fill: none;
-stroke-width:6px ;
-stroke: #0694A2;
-border-radius: 50%;
-stroke-dasharray:100;
-stroke-dashoffset: 450;
+@media screen and (min-width:768px) {
+    .main-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: (7,1fr);
+        grid-template-areas:
+        "nav nav nav"
+        "new notification notification"
+        "new notification notification"
+        "all visited visited"
+        "all visited visited"
+        "upcoming upcoming upcoming"
+        "upcoming upcoming upcoming"
+        ;
+    }
+    .navbar{
+        grid-area: nav;
+    }
+    .notification{
+        grid-area: notification;
+    }
+    .new-patient{
+        grid-area: new;
+    }
+    .visited-patient{
+        grid-area: visited;
+    }
+    .all-patient{
+        grid-area: all;
+    }
+    .upcoming-patient{
+        grid-area: upcoming;
+    }
 }
