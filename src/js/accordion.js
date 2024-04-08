@@ -1,14 +1,24 @@
-const accordionHeaders= document.querySelector(".header");
-const accordionContents = document.querySelector(".content");
 
-accordionHeaders.forEach(accordionHeader => {
-    accordionHeader.addEvenListener("click",()=>{
-        
-    })
-});
-
-function closeAllTab(){
-    accordionContents.forEach(accordionContent=>{
-        accordionContent.classList.add("closeAccordion")
-    })
+const accordion={
+    openId:null
 }
+const tabs=document.querySelectorAll(".tab")
+tabs.forEach(tab=>tab.addEventListener("click",(e)=>{
+    accordion.openId=tab.dataset.id
+
+    tabs.forEach(tab=>{
+        console.log(tab)
+        if(tab.dataset.id===accordion.openId){
+            tab.classList.remove("close")
+            tab.classList.add("open")       
+        }
+        else{
+            tab.classList.remove("open")
+            tab.classList.add("close")
+
+        }
+    }
+
+    )
+}))
+

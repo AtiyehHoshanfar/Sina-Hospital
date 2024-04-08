@@ -57,17 +57,40 @@ input[type=number]::-webkit-outer-spin-button {
 .active div{
     background-color:#0694A2 ;
 }
-.openAccordion{
-    overflow: visible;
-    opacity: 1;
-    height: 48px;
-    transition: all 1s ;
+
+.open.tab{
+    border: 2px solid #0694A2;
 
 }
-.closeAccordion{
+.open .header{
+    background-color: transparent;
+}
+.open .fa-solid{
+transform: rotate(180deg);
+transition: all 0.3s;
+}
+.open .content{
+    overflow: hidden;
+    opacity: 1;
+height: 48px;
+    transition: all 0.3s ;
+
+}
+.close .content{
     overflow: hidden;
     opacity: 0;
     height: 0;
-    transition: all 1s ;
+    transition: all 0.3s ;
 
+}
+.close.tab{
+    border: none;
+
+}
+.close .header{
+    background-color: #EBF6F8;
+}
+.close .fa-solid{
+transform: rotate(0deg);
+transition: all 0.3s;
 }
