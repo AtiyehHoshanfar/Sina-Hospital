@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/build/tailwind/tailwind.css" />
+    <link rel="stylesheet" href="/public/build/scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Demographic Information</title>
+  </head>
+  <body class="bg-[#EBF6F8]">
+    <!-- ! Mobile Navbar -->
+    <div class="flex items-center justify-between md:hidden p-2">
+      <div class="flex items-center justify-between">
+        <img
+          class="w-12 h-12 rounded-full"
+          src="/public/images/300.avif"
+          alt="doctor image"
+        />
+        <div class="flex flex-col mr-2">
+          <div class="text-sm font-bold">دکتر ناصر مقدسی</div>
+          <div class="text-sm font-light">نظام پزشکی :97040</div>
+        </div>
+      </div>
+      <!-- ? Hamburger menu -->
+      <button
+        id="hamburger-button"
+        class="rounded-md bg-Teal-500 p-2 flex items-center justify-center md:hidden"
+      >
+        <i class="fa-solid fa-bars text-Teal-100 text-xl"></i>
+      </button>
+    </div>
+
+    <div class="md:flex">
+      <!-- ! mobile nav -->
+
+      <ul
+        id="sidebar"
+        class="flex duration-1000 flex-col z-50 fixed md:sticky md:translate-x-0 translate-x-full transition-all bg-Teal-500 top-0 right-0 h-screen w-[80%] md:w-28 pt-20 md:p-2 md:m-2 md:rounded-[50px]"
+      >
+        <img
+          class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full"
+          src="/public/images/300.avif"
+          alt="doctor image"
+        />
+        <div
+          class="md:w-32 md:h-32 hidden relative right-2/4 translate-x-2/4 bg-[#EBF6F8] mx-auto md:flex items-center justify-center rounded-full"
+        >
+          <img
+            class="w-20"
+            src="/public/images/ms-removebg-preview.png"
+            alt="مرکز تحقیقات ام اس تهران"
+          />
+        </div>
+        <img
+          class="w-96 items-center mx-auto mb-10 md:hidden"
+          src="/public/images/logo-copy64.webp"
+          alt="مرکز تحقیقات ام اس تهران"
+        />
+        <li
+          class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">داشبورد</a>
+        </li>
+        <li
+          class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">بیماران</a>
+        </li>
+        <li
+          class="px-4 py-3 m-1 rounded-full text-xl text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">اطلاعیه</a>
+        </li>
+        <li
+          class="px-4 py-3 text-xl text-teal-50 m-1 rounded-full hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
+        >
+          <a href="#">تنظیمات</a>
+        </li>
+      </ul>
+      <!-- ! main content -->
+
+      <div class="md:flex-1 md:p-6">
+        <!-- ! Desktop Navbar -->
+        <div class="navbar hidden md:flex items-center justify-between p-2">
+          <div class="flex items-center">
+            <span class="font-bold text-2xl">دکتر ناصر مقدسی</span>
+            <button
+              class="mr-2 w-10 flex items-center justify-center h-10 relative p-2 bg-Teal-50 border rounded-full"
+            >
+              <i class="fa-solid fa-bell text-xl text-Teal-500"></i>
+              <div
+                class="w-4 h-4 text-xs flex items-center justify-center rounded-full bg-Teal-500 absolute top-0 text-Teal-50 right-0"
+              >
+                2
+              </div>
+            </button>
+          </div>
+          <div class="flex items-center">
+            <div class="font-medium text-xl">شماره نظام پزشکی</div>
+            <div
+              class="bg-Teal-50 py-1 px-3 mr-2 text-xl font-medium rounded-md"
+            >
+              97040
+            </div>
+          </div>
+        </div>
+        <!-- ! -->
+        <div
+          class="bg-Teal-50 m-2 rounded-xl p-2 border-Teal-500 border-4 md:border-10 md:p-5 md:border-8"
+        >
+          <!-- ! information  -->
+          <!-- <ul class="flex items-center scrollbar w-full overflow-x-scroll  ">
+            <li>اطلاعات دموگرافیک</li>
+            <li>اطلاعات کلی بیمار</li>
+            <li>وضعیت عملکردی</li>
+            <li>مشکلات دفعی</li>
+            <li>مشکلات فیزیکی اندام فوقانی و تحتانی</li>
+            <li>درد</li>
+            <li>اختلالات بلع و گفتار</li>
+            <li>سایر موارد</li>
+            <li>معاینات</li>
+            <li>برنامه درمانی مداخلات توان بخشی</li>
+          </ul> -->
+          <!-- ! title  -->
+          <ul
+            class="flex items-center justify-between mb-4 bg-Teal-500 text-Teal-50 p-1 md:p-3 rounded-md"
+          >
+            <li class="flex-1 text-center">نام بیمار</li>
+            <li class="flex-1 text-center">شماره نوبت</li>
+            <li class="flex-1 text-center hidden sm:block">علت مراجعه</li>
+            <li class="flex-1 text-center">ساعت پذیرش</li>
+            <li class="flex-1 text-center">تاریخ</li>
+          </ul>
+          <!-- ! patient -->
+
+          <li
+            class="flex items-center justify-end border-2 border-Teal-500 rounded-xl py-6 mb-2 md:mb-4 relative text-[#646060]"
+          >
+            <ul class="flex items-center justify-between w-full">
+              <div
+                class="absolute hidden md:block w-[10px] right-0 h-[70%] rounded-tl-lg rounded-bl-lg bg-Teal-500"
+              ></div>
+              <li class="flex-1 text-center">حجت اکبری</li>
+              <li class="flex-1 text-center">178</li>
+              <li class="flex-1 text-center hidden sm:block">تصادف</li>
+              <li class="flex-1 text-center">14:17</li>
+              <li class="flex-1 text-center">1402/04/24</li>
+            </ul>
+          </li>
+
+          <!-- ! information  -->
+
+          <ul
+            dir="ltr"
+            class="scrollbar overflow-y-scroll h-[60vh] md:h-[60vh] p-2"
+          >
+            <!-- ? accordion -->
+            <li dir="rtl">
+              <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                <!-- ? accordion header -->
+                <div
+                  class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                >
+                <span>ام اس تایید شده </span>
+                  <button
+                    class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                  >
+                    <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                  </button>
+                </div>
+                <!-- ? accordion content -->
+
+<div class="content flex gap-10 h-0 overflow-hidden opacity-0">
+  <!--  ? input  -->
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+        تایید شده
+      </p>
+    </label>
+  </div>
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block leading-relaxed text-blue-gray-400">
+        تایید نشده 
+      </p>
+    </label>
+  </div>
+              </div>
+            </li>
+                        <!-- ? accordion -->
+                        <li dir="rtl">
+                          <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                            <!-- ? accordion header -->
+                            <div
+                              class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                            >
+                            <span> نوع ام اس </span>
+                              <button
+                                class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                              >
+                                <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                              </button>
+                            </div>
+                            <!-- ? accordion content -->
+            
+            <div class="content flex gap-10 h-0 overflow-hidden opacity-0">
+              <!--  ? input  -->
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+                     عود کننده فروکش کننده
+                  </p>
+                </label>
+              </div>
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+                  پیشرونده اولیه
+                  </p>
+                </label>
+              </div>
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+                    پیشرونده ثانویه
+                  </p>
+                </label>
+              </div>
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block leading-relaxed text-blue-gray-400">
+                    مشخص نیست
+                  </p>
+                </label>
+              </div>
+                          </div>
+                        </li>
+
+                                    <!-- ? accordion -->
+            <li dir="rtl">
+              <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                <!-- ? accordion header -->
+                <div
+                  class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                >
+                <span>سایر بیماریها</span>
+                  <button
+                    class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                  >
+                    <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                  </button>
+                </div>
+                <!-- ? accordion content -->
+
+<div class="content flex gap-10 h-0 overflow-hidden opacity-0">
+  <!--  ? input  -->
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+        تایید شده
+      </p>
+    </label>
+  </div>
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block leading-relaxed text-blue-gray-400">
+        تایید نشده 
+      </p>
+    </label>
+  </div>
+              </div>
+            </li>
+
+                        <!-- ? accordion -->
+                        <li dir="rtl">
+                          <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                            <!-- ? accordion header -->
+                            <div
+                              class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                            >
+                            <span>قلبی عروقی</span>
+                              <button
+                                class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                              >
+                                <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                              </button>
+                            </div>
+                            <!-- ? accordion content -->
+            
+            <div class="content flex gap-10 h-0 overflow-hidden opacity-0 ">
+              <!--  ? input  -->
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+                    تایید شده
+                  </p>
+                </label>
+              </div>
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block leading-relaxed text-blue-gray-400">
+                    تایید نشده 
+                  </p>
+                </label>
+              </div>
+                          </div>
+                        </li>
+
+                                    <!-- ? accordion -->
+            <li dir="rtl">
+              <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                <!-- ? accordion header -->
+                <div
+                  class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                >
+                <span>مشکلات روحی</span>
+                  <button
+                    class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                  >
+                    <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                  </button>
+                </div>
+                <!-- ? accordion content -->
+
+<div class="content flex gap-10 h-0 overflow-hidden opacity-0">
+  <!--  ? input  -->
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+        تایید شده
+      </p>
+    </label>
+  </div>
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block leading-relaxed text-blue-gray-400">
+        تایید نشده 
+      </p>
+    </label>
+  </div>
+              </div>
+            </li>
+
+                        <!-- ? accordion -->
+                        <li dir="rtl">
+                          <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                            <!-- ? accordion header -->
+                            <div
+                              class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                            >
+                            <span>تشنج</span>
+                              <button
+                                class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                              >
+                                <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                              </button>
+                            </div>
+                            <!-- ? accordion content -->
+            
+            <div class="content flex gap-10 h-0 overflow-hidden opacity-0 ">
+              <!--  ? input  -->
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+                    تایید شده
+                  </p>
+                </label>
+              </div>
+              <div class="inline-flex items-center">
+                <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+                  <input name="type" type="radio"
+                    class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+                    id="custom-style2" checked />
+                  <span
+                    class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full scale-105">
+                      <path fill-rule="evenodd"
+                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </label>
+                <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+                  <p class="block leading-relaxed text-blue-gray-400">
+                    تایید نشده 
+                  </p>
+                </label>
+              </div>
+                          </div>
+                        </li>
+
+                                    <!-- ? accordion -->
+            <li dir="rtl">
+              <div class=" mb-2 md:mb-4  rounded-2xl md:rounded-[20px]" >
+                <!-- ? accordion header -->
+                <div
+                  class="header flex items-center justify-between bg-[#EBF6F8] py-1 md:py-2 px-5 rounded-2xl md:rounded-[20px]"
+                >
+                <span>سایر موارد</span>
+                  <button
+                    class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 flex items-center justify-center border-Teal-500"
+                  >
+                    <i class="fa-solid fa-chevron-down text-Teal-500"></i>
+                  </button>
+                </div>
+                <!-- ? accordion content -->
+
+<div class="content flex gap-10 h-0 overflow-hidden opacity-0 ">
+  <!--  ? input  -->
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block  text-base antialiased font-normal leading-relaxed text-blue-gray-400">
+        تایید شده
+      </p>
+    </label>
+  </div>
+  <div class="inline-flex items-center">
+    <label class="relative flex items-center p-3 rounded-full cursor-pointer" for="custom-style2">
+      <input name="type" type="radio"
+        class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-900/10 bg-gray-900/5 p-0 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-0"
+        id="custom-style2" checked />
+      <span
+        class="absolute text-Teal-500 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          class="w-full h-full scale-105">
+          <path fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </span>
+    </label>
+    <label class="mt-px font-light text-gray-700 cursor-pointer select-none" for="custom-style2">
+      <p class="block leading-relaxed text-blue-gray-400">
+        تایید نشده 
+      </p>
+    </label>
+  </div>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/src/js/sidebar.js"></script>
+    <script src="/src/js/accordion.js"></script>
+  </body>
+</html>
