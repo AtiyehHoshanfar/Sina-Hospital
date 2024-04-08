@@ -57,3 +57,17 @@ input[type=number]::-webkit-outer-spin-button {
 .active div{
     background-color:#0694A2 ;
 }
+.openAccordion{
+    overflow: visible;
+    opacity: 1;
+    height: 48px;
+    transition: all 1s ;
+
+}
+.closeAccordion{
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all 1s ;
+
+}
