@@ -72,8 +72,8 @@ transition: all 0.3s;
 .open .content{
     overflow: hidden;
     opacity: 1;
-height: 48px;
     transition: all 0.3s ;
+    flex-wrap: wrap;
 
 }
 .close .content{
