@@ -92,6 +92,10 @@ input[type=number]::-webkit-outer-spin-button {
 .close .fa-solid {
   transform: rotate(0deg);
   transition: all 0.3s;
-} 
+}
+
+.invisible {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
