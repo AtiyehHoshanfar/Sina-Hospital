@@ -44,10 +44,10 @@
       
             <ul
               id="sidebar"
-              class="flex duration-1000 flex-col z-40 fixed md:sticky md:translate-x-0 translate-x-full transition-all bg-Teal-500 top-0 right-0 h-screen w-[80%] md:w-28 pt-20  md:rounded-[50px]"
+              class="flex duration-1000 flex-col z-40 fixed md:sticky md:translate-x-0 translate-x-full transition-all bg-Teal-500 top-0 right-0 h-screen w-[80%] md:w-28 p-2   md:rounded-[50px]"
             >
               <img
-                class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full"
+                class="hidden md:block w-24 h-24 mb-4 border-4 border-Teal-50 rounded-full mx-auto"
                 src="/public/images/300.avif"
                 alt="doctor image"
               />
@@ -60,11 +60,11 @@
                   alt="مرکز تحقیقات ام اس تهران"
                 />
               </div>
-              <img
+               <img
                 class="w-96 items-center mx-auto mb-10 md:hidden"
                 src="/public/images/logo-copy64.webp"
                 alt="مرکز تحقیقات ام اس تهران"
-              />
+              /> 
               <li
                 class="px-4 py-3 text-xl m-1 rounded-full text-teal-50 hover:text-Teal-500 md:text-center hover:bg-Teal-50 transition-all font-bold"
               >
@@ -119,27 +119,36 @@
               >
     <form action="" class="flex-1">
         <ul class="md:grid md:grid-cols-2 gap-3">
-            <li class="flex flex-col mb-3 md:mb-4"> 
+            <li id="user-input-firstname" class="user-input flex flex-col mb-3 md:mb-4"> 
                 <label for="first-name" class="mb-1">نام</label> 
-                <input type="text" id="first-name" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <input type="text" id="first-name" class=" bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <span class="hidden  text-sm  mt-1 font-light ">لطفا نام خود را به درستی وارد کنید</span>
               </li>     
-                 <li class="flex flex-col mb-3 md:mb-4">
+                 <li id="user-input-lastname" class="user-input flex flex-col mb-3 md:mb-4">
                 <label for="last-name" class="mb-1">نام خانوادگی</label>
                 <input type="text" id="last-name"class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm" >
+                <span class="hidden  text-sm  mt-1 font-light ">لطفا نام خانوادگی خود را به درستی وارد کنید</span>
+
               </li>   
-                  <li class="flex flex-col mb-3 md:mb-4" >
+                  <li id="user-input-fathersname" class="user-input  flex flex-col mb-3 md:mb-4" >
                 <label for="father's name" class="mb-1">نام پدر</label>
                 <input type="text" id="father's-name"class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <span class="hidden  text-sm  mt-1 font-light ">لطفا نام پدر خود را به درستی وارد کنید</span>
+
               </li>   
-                  <li class="flex flex-col mb-3 md:mb-4" >
+                  <li id="user-input-id" class="user-input flex flex-col mb-3 md:mb-4" >
                 <label for="id" class="mb-1">کد ملی</label>
-                <input type="text" id="id" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm"> 
+                <input type="number" maxlength="10" id="id" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm"> 
+                <span class="hidden  text-sm  mt-1 font-light ">کد ملی وارد شده صحیح نمی باشد</span>
+
               </li>
-              <li class="flex flex-col mb-3 md:mb-4" >
+              <li  class="user-input flex flex-col mb-3 md:mb-4" >
                 <label for="birthday" class="mb-1">تاریخ تولد  </label>
-                <input type="text" data-jdp  id="birthday" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm" />
+                <input type="text" data-jdp data-jdp-max-date="today" id="birthday" class="bg-[#F8FAFB] border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm" />
+                <span class="hidden text-sm  mt-1 font-light ">تاریخ  وارد شده صحیح نمی باشد</span>
+
               </li>
-              <li class="flex mb-3 flex-col md:mb-4">
+              <li class=" flex mb-3 flex-col md:mb-4">
            <label for="gender" class="mb-1">جنسیت</label>
         <div>
     <div class="inline-flex items-center">
@@ -186,17 +195,23 @@
       </div>
     </div>
               </li>
-              <li class="flex flex-col mb-3 md:col-start-1 md:col-end-3 md:mb-4" >
+              <li  class=" flex flex-col mb-3 md:col-start-1 md:col-end-3 md:mb-4" >
                 <label for="address" class="mb-1">آدرس</label>
              <textarea name="address" id="address"   rows="4" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm "></textarea>
+             <span class="hidden text-sm  mt-1 font-light ">آدرس  وارد شده صحیح نمی باشد</span>
+
               </li>
-              <li class="flex flex-col mb-3 md:mb-4"> 
+              <li id="user-input-phone" class="user-input flex flex-col mb-3 md:mb-4"> 
                 <label for="phone-number" class="mb-1">تلفن</label> 
-                <input dir="ltr" type="number" id="phone-number" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <input dir="ltr" type="number" maxlength="8" id="phone-number" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <span class="hidden text-sm  mt-1 font-light ">شماره تلفن  وارد شده صحیح نمی باشد</span>
+
               </li>  
-              <li class="flex flex-col mb-3 md:mb-4"> 
+              <li id="user-input-mobile" class="user-input flex flex-col mb-3 md:mb-4"> 
                 <label for="mobile-number" class="mb-1">موبایل</label> 
-                <input dir="ltr" type="number" id="mobile-number" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <input dir="ltr" type="number" maxlength="11" id="mobile-number" class="bg-[#F8FAFB]  border border-[#E2E8F8] rounded-lg p-2 md:p-3 outline-0 text-sm">
+                <span class="hidden text-sm  mt-1 font-light ">شماره موبایل  وارد شده صحیح نمی باشد</span>
+
               </li>  
     
         </ul>  
@@ -224,11 +239,12 @@
     </div>
 
  </div>
-</div> 
+</div>   
 
 
 <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 <script src="/src/js/sidebar.js"></script>
 <script src="/src/js/demographic.js"></script>
+<script src="/src/js/validation.js"></script>
 </body>
 </html>

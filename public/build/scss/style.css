@@ -44,18 +44,18 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .active {
-  border: 2px solid #0694A2;
-  color: #0694A2;
+  border: 2px solid #0694a2;
+  color: #0694a2;
   transition: all 0.3s ease;
   box-shadow: 0px 3px 12.5px 3px rgba(0, 0, 0, 0.11);
 }
 
 .active div {
-  background-color: #0694A2;
+  background-color: #0694a2;
 }
 
 .open.tab {
-  border: 2px solid #0694A2;
+  border: 2px solid #0694a2;
 }
 
 .open .header {
@@ -86,7 +86,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .close .header {
-  background-color: #EBF6F8;
+  background-color: #ebf6f8;
 }
 
 .close .fa-solid {
@@ -96,6 +96,32 @@ input[type=number]::-webkit-outer-spin-button {
 
 .invisible {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navItem::before {
+    content: " ";
+    background-color: #EBF6F8;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: -7px;
+    overflow: hidden;
+    left: -6px;
+    border-right: 4px solid #0694a2;
+    transform: rotate(45deg);
+  }
+}
+.invalid-data {
+  color: #ef4444;
+}
+
+.invalid-data span {
+  display: block;
+}
+
+.invalid-data input, .invalid-data textarea {
+  border: 2px solid #ef4444;
 }
 
 /*# sourceMappingURL=style.css.map */

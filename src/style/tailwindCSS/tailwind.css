@@ -18,6 +18,14 @@
   }
 }
 
+@media screen and (min-width:768px) {
+
+  .scrollbar-nav::-webkit-scrollbar {
+background-color: transparent;
+}
+.scrollbar-nav::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}}
 /* 
 @font-face {
     font-family:Vazirmatn;
